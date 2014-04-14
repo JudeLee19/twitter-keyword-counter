@@ -1,0 +1,7 @@
+.idea/*
+*.properties
+*.json
+*.log*
+*.iml
+*.txt
+.*
