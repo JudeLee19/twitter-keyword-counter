@@ -23,6 +23,7 @@ public class CountReducer extends Reducer <Text,IntWritable,Text,IntWritable> {
 
         int sum=0;
 
+        //Mapper의 결과물로 나온 <Key,Value>의 쌍들중에서 Key값을 기준으로 Value값들을 모두 더해준다.
         for(IntWritable value:values){
         sum+=value.get();
         }

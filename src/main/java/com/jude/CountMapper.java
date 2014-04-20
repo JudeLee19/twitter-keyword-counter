@@ -32,7 +32,7 @@ public class CountMapper extends Mapper<LongWritable,Text,Text,IntWritable>{
 
 
 
-        //Regex 패턴 설정.
+        //정규식 표현 설정.
         Pattern pattern=Pattern.compile(Regex);
 
         Pattern pattern2=Pattern.compile(Regex2);
@@ -49,6 +49,7 @@ public class CountMapper extends Mapper<LongWritable,Text,Text,IntWritable>{
             try {
 
 
+                //각각의 Counting할 Keyword 설정.
                 while(matcher.find()) {
                     outputKey.set("벚꽃");
                     context.write(outputKey,outputValue);
